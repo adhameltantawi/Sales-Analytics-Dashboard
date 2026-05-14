@@ -29,33 +29,36 @@ The analyst translated an informal business conversation into a structured deman
 ## 🗂️ Repository Structure
 
 ```
-📁 AdventureWorks-Internet-Sales-Analytics/
+📁 NovaMart-Sales-Analytics/
 │
-├── 📄 README.md                          ← Project overview, structure & documentation (this file)
-├── 📄 steps.md                           ← Analyst's documented thought process & methodology
+├── Data/
+│   ├── DIM-Calendar-v2.csv
+│   ├── DM_Products.csv
+│   ├── DM_customers.csv
+│   └── FACT_InternetSales.csv
 │
-├── 💾 AdventureWorksDW2019.bak           ← Primary Data Warehouse backup (SQL Server restore)
-├── 💾 AdventureWorksLT2019.bak           ← Lightweight transactional DB backup (supplementary)
+├── SQL/
+│   ├── DIM-Calendar-v2.sql
+│   ├── DM_Products.sql
+│   ├── DM_customers.sql
+│   ├── FACT_InternetSales.sql
+│   └── SQLQuery1.sql
 │
-├── 📑 Business Request after highlights.pdf   ← Annotated stakeholder email with key requirements highlighted
-├── 📑 Business Demand Overview.pdf            ← Structured BDO document with user stories
+├── Database/
+│   ├── AdventureWorksDW2019.bak
+│   └── AdventureWorksLT2019.bak
 │
-├── 🗄️ SQLQuery1.sql                      ← AdventureWorksUpdate stored procedure (date normalization)
+├── Documentation/
+│   ├── Business Demand Overview.pdf
+│   ├── Business Request after highlights.pdf
+│   └── README.md
 │
-├── 🗄️ DIM-Calendar-v2.sql               ← Cleansed Date Dimension query
-├── 📊 DIM-Calendar-v2.csv               ← Exported Calendar dimension dataset
+├── Dashboard/
+│   └── Sales Overview Dashboard.pbix
 │
-├── 🗄️ DM_customers.sql                  ← Cleansed Customer Dimension query
-├── 📊 DM_customers.csv                  ← Exported Customer dimension dataset
-│
-├── 🗄️ DM_Products.sql                   ← Cleansed Product Dimension query (with Sub/Category joins)
-├── 📊 DM_Products.csv                   ← Exported Product dimension dataset
-│
-├── 🗄️ FACT_InternetSales.sql            ← Cleansed Internet Sales Fact Table query
-├── 📊 FACT_InternetSales.csv            ← Exported Internet Sales fact dataset
-│
-├── 📈 Sales Overview Dashboard.pbix     ← Final Power BI interactive dashboard
-└── 🖥️ Sales Overview Presentation.pptx ← Executive presentation summarizing the full BI engagement
+└── Images/
+    ├── dashboard-preview.png
+    └── dashboard-filters.png
 ```
 
 ---
