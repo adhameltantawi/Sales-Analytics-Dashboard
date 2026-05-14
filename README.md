@@ -51,6 +51,7 @@ The analyst translated an informal business conversation into a structured deman
 ├── Documentation/
 │   ├── Business Demand Overview.pdf
 │   ├── Business Request after highlights.pdf
+|   ├── Analytical Methodology & Thought Process.md
 │   └── README.md
 │
 ├── Dashboard/
