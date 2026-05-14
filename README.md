@@ -57,9 +57,11 @@ The analyst translated an informal business conversation into a structured deman
 ├── Dashboard/
 │   └── Sales Overview Dashboard.pbix
 │
-└── Images/
-    ├── dashboard-preview.png
-    └── dashboard-filters.png
+├── Images/
+|   ├── dashboard-preview.png
+|   └── dashboard-filters.png
+|
+└── README.md
 ```
 
 ---
