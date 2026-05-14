@@ -8,6 +8,16 @@
 
 ---
 
+## 🔗 Quick Navigation
+
+| Document | Description | Link |
+|----------|-------------|------|
+| 📋 Analytical Methodology | Step-by-step breakdown of the analyst's thought process, decisions, and SQL iteration logic | [📖 View steps.md](./steps.md) |
+| 📊 Sales Overview Dashboard | Interactive Power BI dashboard file | [📈 Open Dashboard](./Sales%20Overview%20Dashboard.pbix) |
+| 🎨 Project Presentation | Executive presentation slides summarizing the full engagement | [🖥️ View Presentation](./Sales%20Overview%20Presentation.pptx) |
+
+---
+
 ## 🧭 Project Overview
 
 This project represents a full-cycle, enterprise-grade Business Intelligence engagement — from raw stakeholder communication through to a fully interactive Power BI dashboard. It was initiated in direct response to a formal business request from the Sales Manager, who identified a critical gap between the organization's existing static reporting infrastructure and the dynamic, filterable visual intelligence required by the modern sales force.
@@ -44,7 +54,8 @@ The analyst translated an informal business conversation into a structured deman
 ├── 🗄️ FACT_InternetSales.sql            ← Cleansed Internet Sales Fact Table query
 ├── 📊 FACT_InternetSales.csv            ← Exported Internet Sales fact dataset
 │
-└── 📈 Sales Overview Dashboard.pbix     ← Final Power BI interactive dashboard
+├── 📈 Sales Overview Dashboard.pbix     ← Final Power BI interactive dashboard
+└── 🖥️ Sales Overview Presentation.pptx ← Executive presentation summarizing the full BI engagement
 ```
 
 ---
@@ -143,16 +154,145 @@ Open `Sales Overview Dashboard.pbix` in Power BI Desktop. Connect or refresh dat
 
 ---
 
-## 📈 Dashboard Capabilities
+## 📈 Sales Overview Dashboard
 
-The delivered Power BI dashboard provides the following analytical capabilities:
+The delivered Power BI dashboard is a fully interactive, multi-dimensional analytical report designed to serve both executive oversight and individual sales representative accountability. Every visual element traces directly to one of the four formally defined user stories.
 
-- **Sales vs. Budget KPIs** — At-a-glance comparison of actual sales revenue against the 2021 budget target
-- **Product Performance Analysis** — Ranked view of top-selling products by revenue, filterable by category and subcategory
-- **Customer Intelligence** — Identification of highest-value customers with geographic drill-down to city level
-- **Time-Series Trending** — Monthly, quarterly, and annual sales trends across the full two-year analysis window
-- **Sales Representative Filtering** — Individual rep-level filtering enabling personalized performance tracking
-- **Interactive Cross-Filtering** — All visuals respond dynamically to selections across the report canvas
+> **📷 Dashboard Screenshot — Full Overview**
+> 
+> ![Sales Overview Dashboard — Full View](./screenshots/dashboard-overview.png)
+> *← Replace this placeholder with your exported dashboard screenshot*
+
+---
+
+### 🕐 1. Top Section — Time Intelligence Filters
+
+Two primary time filters are positioned prominently at the top of the dashboard, enabling instant scoping of all downstream visuals to a specific period.
+
+**Year Filter** — A horizontal selector spanning the full analysis window: `2019 · 2020 · 2021`
+
+**Month Filter** — A full twelve-month selector from `Jan` through `Dec`, enabling month-level drill-down without losing year context.
+
+> **📷 Screenshot — Time Filter Bar**
+> 
+> ![Time Filters](./screenshots/filter-time.png)
+
+---
+
+### 🔽 2. Left Sidebar — Dimensional Slicers
+
+An interactive slicer panel on the left side of the report canvas provides granular filtering across four dimensions, allowing each user to personalize the dashboard view to their specific analytical scope.
+
+| Slicer | Source Dimension | Purpose |
+|--------|-----------------|---------|
+| **Customer City** | `DIM_Customers` → `Customer City` | Filter by customer geographic location |
+| **Sub Category** | `DIM_Products` → `Sub Category` | Filter by product subcategory |
+| **Category** | `DIM_Products` → `Product Category` | Filter by top-level product category |
+| **Product Name** | `DIM_Products` → `Product Name` | Filter to a specific product |
+
+> **📷 Screenshot — Left Sidebar Slicers**
+> 
+> ![Dimensional Slicers](./screenshots/filter-sidebar.png)
+
+---
+
+### 📊 3. Main KPI Card — Sales vs. Budget
+
+The headline KPI card is positioned at the top center of the dashboard and provides the single most important business metric at a glance.
+
+It surfaces three values simultaneously:
+- **Total Sales** — Actual realized revenue for the selected period
+- **Budget** — The planned financial target for the same period
+- **Variance** — The absolute and directional difference between actuals and plan
+
+An upward indicator confirms that actual sales have exceeded the budgeted target, giving the Sales Manager an immediate performance signal without needing to interrogate any chart.
+
+> **📷 Screenshot — KPI Card**
+> 
+> ![Sales vs Budget KPI](./screenshots/kpi-card.png)
+
+---
+
+### 👥 4. Top 10 Customers Analysis
+
+**Visual Type:** Horizontal Bar Chart
+
+This chart ranks the ten highest-revenue-generating customers, displaying customer names alongside their corresponding sales amounts in descending order.
+
+**Business Value:** Enables the Sales Manager to instantly identify which client relationships are driving the most revenue — directly supporting user story #1 (dashboard overview) and user story #2 (customer-level detail for representatives).
+
+> **📷 Screenshot — Top 10 Customers Chart**
+> 
+> ![Top 10 Customers](./screenshots/chart-top-customers.png)
+
+---
+
+### 📦 5. Top 10 Products Analysis
+
+**Visual Type:** Horizontal Bar Chart
+
+This chart surfaces the ten best-performing products by sales value, providing product names and their respective revenue contributions.
+
+**Business Value:** Satisfies user story #3 — giving sales representatives a clear view of which products to prioritize and which may require attention.
+
+> **📷 Screenshot — Top 10 Products Chart**
+> 
+> ![Top 10 Products](./screenshots/chart-top-products.png)
+
+---
+
+### 🍩 6. Product Category Distribution
+
+**Visual Type:** Doughnut Chart
+
+This chart visualizes the proportional revenue contribution of each product category (e.g., Bikes, Accessories), displaying both the absolute sales amount and the percentage share of total revenue.
+
+**Business Value:** Provides strategic context — revealing which categories form the revenue backbone of the business versus which represent growth opportunities or underperformers.
+
+> **📷 Screenshot — Category Distribution Chart**
+> 
+> ![Product Category Distribution](./screenshots/chart-category-donut.png)
+
+---
+
+### 📅 7. Monthly Sales vs. Budget Trend
+
+**Visual Type:** Line Chart (Dual Series)
+
+This chart plots two series across all twelve calendar months — actual monthly sales and the corresponding monthly budget target — enabling direct visual comparison between performance and plan.
+
+**Business Value:** Satisfies user story #4 explicitly. It enables the Sales Manager to detect seasonal patterns, identify months where performance diverged significantly from target, and assess whether the trend is improving or deteriorating across the year.
+
+> **📷 Screenshot — Monthly Trend Line Chart**
+> 
+> ![Monthly Sales vs Budget](./screenshots/chart-monthly-trend.png)
+
+---
+
+### 🗺️ 8. Geographic Sales Distribution
+
+**Visual Type:** Map Visualization (Bubble Map)
+
+This map plots customer locations geographically, with bubble size proportional to sales volume at each city. It provides an immediate spatial understanding of where revenue is concentrated and where market penetration may be weak.
+
+**Business Value:** Supports territory planning, logistics prioritization, and the identification of high-performing regional markets versus underserved geographies.
+
+> **📷 Screenshot — Geographic Sales Map**
+> 
+> ![Sales by Customer City Map](./screenshots/map-geographic.png)
+
+---
+
+### 🎯 Dashboard Objective Summary
+
+The dashboard consolidates all analytical capabilities into a single, coherent interface that serves every user story defined in the business demand phase:
+
+- Monitor overall sales performance against budget at a glance
+- Identify the top customers and products driving revenue
+- Analyze monthly performance trends and detect seasonal patterns
+- Understand geographic sales distribution and regional opportunity
+- Enable individual sales representative filtering for personal accountability
+- Support strategic, data-driven decision-making at every organizational level
 
 ---
 
@@ -188,6 +328,16 @@ Null values in product status create ambiguity in Power BI slicers and visuals. 
 
 **Adham** — Data Analyst  
 End-to-end BI delivery across requirements gathering, data engineering, dimensional modeling, SQL development, and Power BI dashboard design.
+
+---
+
+## 📎 Related Resources
+
+| Resource | Link |
+|----------|------|
+| 📖 Analytical Methodology (Step-by-Step) | [steps.md](./steps.md) |
+| 🖥️ Executive Presentation | [Sales Overview Presentation.pptx](./Sales%20Overview%20Presentation.pptx) |
+| 📈 Power BI Dashboard File | [Sales Overview Dashboard.pbix](./Sales%20Overview%20Dashboard.pbix) |
 
 ---
 
