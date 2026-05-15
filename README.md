@@ -14,7 +14,7 @@
 |----------|-------------|------|
 | 📋 Analytical Methodology | Step-by-step breakdown of the analyst's thought process, decisions, and SQL iteration logic | [📖 View Analytical Methodology Thought.md](./Documentation/Analytical%20Methodology%20%26%20Thought%20Process.md) |
 | 📊 Sales Overview Dashboard | Interactive Power BI dashboard file | [📈 Open Dashboard](./Sales%20Overview%20Dashboard.pbix) |
-| 🎨 Project Presentation | Executive presentation slides summarizing the full engagement | [🖥️ View Presentation](./Presentation.pptx) |
+| 🎨 Project Presentation | Executive presentation slides summarizing the full engagement | [🖥️ View Presentation](./Presentation.pdf) |
 
 ---
 
@@ -348,7 +348,7 @@ End-to-end BI delivery across requirements gathering, data engineering, dimensio
 | Resource | Link |
 |----------|------|
 | 📖 Analytical Methodology (Step-by-Step) | [Analytical Methodology Thought.md](./Documentation/Analytical%20Methodology%20%26%20Thought%20Process.md) |
-| 🖥️ Executive Presentation | [Sales Overview Presentation.pptx](./Presentation.pptx) |
+| 🖥️ Executive Presentation | [Sales Overview Presentation.pptx](./Presentation.pdf) |
 | 📈 Power BI Dashboard File | [Sales Overview Dashboard.pbix](./Sales%20Overview%20Dashboard.pbix) |
 
 ---
