@@ -12,9 +12,9 @@
 
 | Document | Description | Link |
 |----------|-------------|------|
-| 📋 Analytical Methodology | Step-by-step breakdown of the analyst's thought process, decisions, and SQL iteration logic | [📖 View steps.md](./steps.md) |
+| 📋 Analytical Methodology | Step-by-step breakdown of the analyst's thought process, decisions, and SQL iteration logic | [📖 View Analytical Methodology Thought.md](./Documentation/Analytical%20Methodology%20%26%20Thought%20Process.md) |
 | 📊 Sales Overview Dashboard | Interactive Power BI dashboard file | [📈 Open Dashboard](./Sales%20Overview%20Dashboard.pbix) |
-| 🎨 Project Presentation | Executive presentation slides summarizing the full engagement | [🖥️ View Presentation](./Sales%20Overview%20Presentation.pptx) |
+| 🎨 Project Presentation | Executive presentation slides summarizing the full engagement | [🖥️ View Presentation](./Presentation.pptx) |
 
 ---
 
@@ -54,12 +54,18 @@ The analyst translated an informal business conversation into a structured deman
 |   ├── Analytical Methodology & Thought Process.md
 │   └── insights.md
 │
-├── Dashboard/
-│   └── Sales Overview Dashboard.pbix
-│
-├── Images/
-|   ├── dashboard-preview.png
-|   └── dashboard-filters.png
+├── images/
+│   ├── chart-category-donut.png
+│   ├── chart-monthly-trend.png
+│   ├── chart-top-customers.png
+│   ├── chart-top-products.png
+│   ├── dashboard-overview.png
+│   ├── filter-sidebar.png
+│   ├── filter-time.png
+│   ├── kpi-card.png
+│   └── map-geographic.png
+|
+├── Sales Overview Dashboard.pbix 
 |
 └── README.md
 ```
@@ -166,7 +172,7 @@ The delivered Power BI dashboard is a fully interactive, multi-dimensional analy
 
 > **📷 Dashboard Screenshot — Full Overview**
 > 
-> ![Sales Overview Dashboard — Full View](./screenshots/dashboard-overview.png)
+> ![Sales Overview Dashboard — Full View](./Images/dashboard-overview.png)
 > *← Replace this placeholder with your exported dashboard screenshot*
 
 ---
@@ -181,7 +187,7 @@ Two primary time filters are positioned prominently at the top of the dashboard,
 
 > **📷 Screenshot — Time Filter Bar**
 > 
-> ![Time Filters](./screenshots/filter-time.png)
+> ![Time Filters](./Images/filter-time.png)
 
 ---
 
@@ -198,7 +204,7 @@ An interactive slicer panel on the left side of the report canvas provides granu
 
 > **📷 Screenshot — Left Sidebar Slicers**
 > 
-> ![Dimensional Slicers](./screenshots/filter-sidebar.png)
+> ![Dimensional Slicers](./Images/filter-sidebar.png)
 
 ---
 
@@ -215,7 +221,7 @@ An upward indicator confirms that actual sales have exceeded the budgeted target
 
 > **📷 Screenshot — KPI Card**
 > 
-> ![Sales vs Budget KPI](./screenshots/kpi-card.png)
+> ![Sales vs Budget KPI](./Images/kpi-card.png)
 
 ---
 
@@ -229,7 +235,7 @@ This chart ranks the ten highest-revenue-generating customers, displaying custom
 
 > **📷 Screenshot — Top 10 Customers Chart**
 > 
-> ![Top 10 Customers](./screenshots/chart-top-customers.png)
+> ![Top 10 Customers](./Images/chart-top-customers.png)
 
 ---
 
@@ -243,7 +249,7 @@ This chart surfaces the ten best-performing products by sales value, providing p
 
 > **📷 Screenshot — Top 10 Products Chart**
 > 
-> ![Top 10 Products](./screenshots/chart-top-products.png)
+> ![Top 10 Products](./Images/chart-top-products.png)
 
 ---
 
@@ -257,7 +263,7 @@ This chart visualizes the proportional revenue contribution of each product cate
 
 > **📷 Screenshot — Category Distribution Chart**
 > 
-> ![Product Category Distribution](./screenshots/chart-category-donut.png)
+> ![Product Category Distribution](./Images/chart-category-donut.png)
 
 ---
 
@@ -271,7 +277,7 @@ This chart plots two series across all twelve calendar months — actual monthly
 
 > **📷 Screenshot — Monthly Trend Line Chart**
 > 
-> ![Monthly Sales vs Budget](./screenshots/chart-monthly-trend.png)
+> ![Monthly Sales vs Budget](./Images/chart-monthly-trend.png)
 
 ---
 
@@ -285,7 +291,7 @@ This map plots customer locations geographically, with bubble size proportional 
 
 > **📷 Screenshot — Geographic Sales Map**
 > 
-> ![Sales by Customer City Map](./screenshots/map-geographic.png)
+> ![Sales by Customer City Map](./Images/map-geographic.png)
 
 ---
 
@@ -341,8 +347,8 @@ End-to-end BI delivery across requirements gathering, data engineering, dimensio
 
 | Resource | Link |
 |----------|------|
-| 📖 Analytical Methodology (Step-by-Step) | [steps.md](./steps.md) |
-| 🖥️ Executive Presentation | [Sales Overview Presentation.pptx](./Sales%20Overview%20Presentation.pptx) |
+| 📖 Analytical Methodology (Step-by-Step) | [Analytical Methodology Thought.md](./Documentation/Analytical%20Methodology%20%26%20Thought%20Process.md) |
+| 🖥️ Executive Presentation | [Sales Overview Presentation.pptx](./Presentation.pptx) |
 | 📈 Power BI Dashboard File | [Sales Overview Dashboard.pbix](./Sales%20Overview%20Dashboard.pbix) |
 
 ---
